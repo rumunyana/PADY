@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../CSS/sign_up.css" />
+    <!-- Poppins fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Montserrat:wght@200&family=Poppins:wght@200&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="signup-form">
+                <form action="../Template/dashboard.html" method="post">
+                    <div class="branch">
+                        <h1>PADY </h1>
+                    </div>
+
+                    <div class="form-content">
+                        <div class="form-fields">
+                            <div class="email">
+                                <h4>Email*</h4>
+                                <input type="email" name="email" placeholder="mail@simple.com" id="email" required />
+                            </div>
+                            <div class="password">
+                                <h4>Password*</h4>
+                                <input type="password" placeholder="Min. 8 characters" name="password" id="pwd" required />
+                            </div>
+                            <div class="confirm-password">
+                                <h4>Confirm Password*</h4>
+                                <input type="password" placeholder="Confirm password" name="confirm_password" id="confirmPwd" required />
+                            </div>
+                            <div>
+                                <label for="terms" id="checkbox">
+                                    <input type="checkbox" name="terms_agreement" required /> 
+                                    <span>I agree to the <a href="terms_and_conditions.html" target="_blank">terms and conditions</a></span>
+                                </label>
+                            </div>
+                            <button type="submit">Sign Up</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="signup-image">
+                <img src="../images/PADY 1.png" alt="Signup Image" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>
