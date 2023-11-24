@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Previous Transactions</title>
+        <title>Admin Dashboard</title>
         <!-- Custom Css -->
-        <link rel="stylesheet" href="../CSS/previous_bills.css" />
+        <link rel="stylesheet" href="../CSS/profile.css" />
         <!-- Poppins fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
                     <span class="material-icons-outlined">menu</span>
                 </div>
                 <div class="header-left">
-                    <h4>Previous Transactions</h4>
+                    <h4>Home Page</h4>
                 </div>
                 <div class="header-right">
                     <div class="search-container">
@@ -40,17 +40,21 @@
             <!-- sidebar -->
             <aside id="sidebar">
                 <div class="sidebar-title">
-                    <div class="sidebar-brand"><strong><a href="index.html">MEDCONNECT</a></strong></div>
+                    <div class="sidebar-brand"><strong><a href="index.html">PADY</a></strong></div>
                     <span class="material-icons-outlined" onclick="closeSidebar()">close_fullscreen</span>
                 </div>
-                <ul class="sidebar-list">
+                 <ul class="sidebar-list">
 
                     <li class="sidebar-list-item"><img src="../images/Dashboard.png" alt="" /><a href="main dashboard.html">Dashboard</a></li>
                     <li class="sidebar-list-item"><img src="../images/home page.png" alt="" /><a href="home_page.html">Home</a></li>
                     <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="view_bill.html">View bills</a></li>
-                    <li class="sidebar-list-item"><img src="../images/profile.png" id="profile" /><a
-                            href="profile.html">Profile</a></li>
-                </ul>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="records.html">My Records</a></li>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="hospitals.html">Hospitals</a></li>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="payment.html">Payment</a></li>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="schedule.html">Schedule</a></li>
+                    <li class="sidebar-list-item"><img src="../images/profile.png" id="profile" /><a href="profile.html">Profile</a></li>
+                 </ul>
+
                 <div class="purple-logout-button">
                     <button type="button" class="btn btn-purple"><a href="index.html">Logout</a></a></button>
                 </div>
@@ -58,49 +62,19 @@
 
 <!-- Main Content -->
 <main class="main-container">
-    <div class="main-title">
-      <h4>Previous Transactions</h4>
-    </div>   
-    <div class="container">
-        <table>
-            <thead>
-              <tr>
-                <th>Invoice</th>
-                <th>Name</th>
-                <th>Date Paid</th>
-                <th>Amount</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>C112356738</td>
-                    <td>Gisa Almand</td>
-                    <td>12/11/2021</td>
-                    <td>RWF 5,000</td>
-                    <td><button class="view-receipt-button"><a href="view_bill.html">View Receipt</a></button></td>
-                </tr>
-                <tr>
-                    <td>C112356738</td>
-                    <td>Ganza Almand</td>
-                    <td>12/2/2021</td>
-                    <td>RWF 20,000</td>
-                    <td><button class="view-receipt-button"><a href="view_bill.html">View Receipt</a></button></td>
-                </tr>
-                <tr>
-                    <td>C1123567380</td>
-                    <td>Nziza Almand</td>
-                    <td>12/8/2021</td>
-                    <td>RWF 10,000</td>
-                    <td><button class="view-receipt-button"><a href="view_bill.html">View Receipt</a></button></td>
-                </tr>
-                <tr>
-                    <td>C1123567389</td>
-                    <td>Nkusi Almand</td>
-                    <td>12/9/2021</td>
-                    <td>RWF 8,000</td>
-                    <td><button class="view-receipt-button"><a href="view_bill.html">View Receipt</a></button></td>
-                </tr>
+    <div class="your-profile">
+        <div class="your-profile-img">
+            <img src="../images/profile2.png" alt="Profile Avatar">
+        </div>
+        <div class="profile-details">
+            <p><strong>Name:</strong> Ngabo Uwimama</p>
+            <p><strong>Address:</strong> Nakhipot</p>
+            <p><strong>Phone no:</strong> 982654398</p>
+            <p><strong>Email:</strong> Albina@gmail.com</p>
+            <p><strong>Password:</strong> ********</p>
+        </div>
+        <button class="edit-button">Edit</button>
+    </div>
 </main>
 
             <!-- END MAIN -->

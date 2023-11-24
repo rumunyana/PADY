@@ -4,9 +4,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Make Payment</title>
+        <title>View Bill</title>
         <!-- Custom Css -->
-        <link rel="stylesheet" href="../CSS/payment.css" />
+        <link rel="stylesheet" href="../CSS/view_bill.css" />
         <!-- Poppins fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,7 +25,7 @@
                     <span class="material-icons-outlined">menu</span>
                 </div>
                 <div class="header-left">
-                    <h4>Make Payment</h4>
+                    <h4>View Bill</h4>
                 </div>
                 <div class="header-right">
                     <div class="search-container">
@@ -40,7 +40,7 @@
             <!-- sidebar -->
             <aside id="sidebar">
                 <div class="sidebar-title">
-                    <div class="sidebar-brand"><strong><a href="index.html">MEDCONNECT</a></strong></div>
+                    <div class="sidebar-brand"><strong><a href="index.html">PADY</a></strong></div>
                     <span class="material-icons-outlined" onclick="closeSidebar()">close_fullscreen</span>
                 </div>
                 <ul class="sidebar-list">
@@ -48,43 +48,45 @@
                     <li class="sidebar-list-item"><img src="../images/Dashboard.png" alt="" /><a href="main dashboard.html">Dashboard</a></li>
                     <li class="sidebar-list-item"><img src="../images/home page.png" alt="" /><a href="home_page.html">Home</a></li>
                     <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="view_bill.html">View bills</a></li>
-                    <li class="sidebar-list-item"><img src="../images/profile.png" id="profile" /><a
-                            href="profile.html">Profile</a></li>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="records.html">My Records</a></li>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="hospitals.html">Hospitals</a></li>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="payment.html">Payment</a></li>
+                    <li class="sidebar-list-item"><img src="../images/Reports.png" alt="" /><a href="schedule.html">Schedule</a></li>
+                    <li class="sidebar-list-item"><img src="../images/profile.png" id="profile" /><a href="profile.html">Profile</a></li>
                 </ul>
                 <div class="purple-logout-button">
-                    <button type="button" class="btn btn-purple"><a href="index.html">Logout</a></a></button>
+                    <button type="button" class="btn btn-purple"><a href="login.html">Logout</a></a></button>
                 </div>
             </aside>
 
 <!-- Main Content -->
 <main class="main-container">
-    <div class="make_payment">
-        <div class="payment-details">
-            <div class="details">
-            <h1>Credit Card Payment</h1>
-            <p>Make payment through your credit card below</p>
-            </div>
-        <div class="payment-form">
-            <form action="process_payment" method="post">
-                <label for="cardholderName">Cardholder's Name:</label>
-                <input type="text" id="cardholderName" name="cardholderName" required><br>
-                
-                <label for="cardNumber">Card Number:</label>
-                <input type="text" id="cardNumber" name="cardNumber" required><br>
-                
-                <label for="expirationDate">Expiration Date:</label>
-                <input type="text" id="expirationDate" name="expirationDate" placeholder="MM/YYYY" required><br>
-                
-                <label for="cvv">CVV:</label>
-                <input type="text" id="cvv" name="cvv" required><br>
-                
-                <label for="amount">Amount:</label>
-                <input type="text" id="amount" name="amount" required><br>
-                
-              </form>
-        </div>
-        <button class="pay-button">Make Transactions</button>
+    <div class="main-title">
+      <h4>Your bills</h4>
     </div>
+    <div class="previous-bills">
+        <button class="previous-bills-button"><a href="previous_bills.html">Previous Transactions</a></button>
+      
+    </div>   
+    <div class="container">
+        <table>
+            <thead>
+              <tr>
+                <th>Invoice</th>
+                <th>Name</th>
+                <th>Due Date</th>
+                <th>Amount</th>
+                <th>Payment</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>C112356738</td>
+                    <td>Gisa Almand</td>
+                    <td>12/12/2021</td>
+                    <td>RWF 5,000</td>
+                    <td><button class="pay-button"><a href="payment.html">Make Payment</a></button></td>
+                </tr>
 </main>
 
             <!-- END MAIN -->
@@ -93,7 +95,7 @@
             <!-- ApexCharts -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
             <!-- Custom JS -->
-            <script src="../Template/js/script.js"></script>
+            <script src="js/script.js"></script>
     </body>
 
 </html>
