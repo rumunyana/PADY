@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login Page</title>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../CSS/login.css" />
-    <!-- Poppins fonts-->
+    <link rel="stylesheet" href="CSS/login.css" />
+    <!-- Poppins fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Montserrat:wght@200&family=Poppins:wght@200&display=swap" rel="stylesheet" />
@@ -17,41 +17,44 @@
     <div class="main-container">
         <div class="container">
             <div class="login-form">
-                <form action="../Template/dashboard.html" method="post">
+                <form action="dashboard.html" method="post">
                     <div class="branch">
                         <h1>PADY USER</h1>
                     </div>
                     <div class="email">
-                        <h4>Email*</h4>
-                        <input type="email" name="email" placeholder="mail@simple.com" id="email" required />
+                        <label for="email"><h4>Email*</h4></label>
+                        <input type="email" name="email" id="email" placeholder="mail@simple.com" required />
                     </div>
                     <div class="password">
-                        <h4>Password*</h4>
-                        <input type="password" placeholder="Min. 8 characters" name="password" id="pwd" required />
-                        <p>Forget password?</p>
+                        <label for="pwd"><h4>Password*</h4></label>
+                        <input type="password" name="password" id="pwd" placeholder="Min. 8 characters" required />
+                        <p><a href="#">Forgot password?</a></p>
                     </div>
                     <div>
-                        <label for="Keep-log-in" id="checkbox">
-                            <input type="checkbox" name="keep_logged_in" /> Keep me logged in
+                        <label for="keep-logged-in" id="checkbox">
+                            <input type="checkbox" name="keep_logged_in" id="keep-logged-in" /> Keep me logged in
                         </label>
                     </div>
-                    <button type="submit">Login</button>
-                    <div class="google-sign-in">
-                        <p>or use Google</p>
-                        <!-- Add your Google sign-in button code here -->
-                        <!-- Example using an image for the Google button -->
-                        <a href="#" class="google-button">
-                            <img src="path/to/google-icon.png" alt="Google Icon" />
-                            Sign in with Google
-                        </a>
+                    <button type="submit" id="loginButton">Login</button>
+                    <div class="register-button">
+                        <p>Don't have an account?</p>
+                        <a href="sign.html" class="register-link">Register</a>
                     </div>
                 </form>
             </div>
             <div class="login-image">
-                <img src="../images/PADY 3.png" alt="Login Image" />
+                <img src="Images/PADY 3.png" alt="Login Image" />
             </div>
         </div>
     </div>
+
+    <!-- Additional script for linking the login button -->
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function () {
+            window.location.href = "dashboard.html"; // Redirect to dashboard.html
+        });
+    </script>
+
 </body>
 
 </html>
