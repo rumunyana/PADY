@@ -2,57 +2,115 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="CSS/login.css" />
-    <!-- Poppins fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Montserrat:wght@200&family=Poppins:wght@200&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <!-- Include Bootstrap CSS link here if not already included -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Add any additional stylesheets or scripts here -->
+    <style>
+        /* Additional Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #aebccb;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0); /* Transparent white background */
+        }
+
+        .navbar-brand img {
+            max-height: 40px; /* Adjust the max height as needed */
+            margin-right: 10px; /* Optional: Add margin for spacing */
+        }
+
+        .login-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 70px 30px; /* Adjusted padding values */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 80px;
+        }
+
+        .form-check-label {
+            user-select: none;
+        }
+        button:hover {
+            background-color: #2d1276;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="container">
-            <div class="login-form">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container-fluid">
+            <!-- Logo Image -->
+            <a class="navbar-brand" href="#">
+                <img src="Images/PADY 2.png" alt="PADY Logo">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Log In Form -->
+    <div class="container login-container">
+        <h2 class="mb-4 text-center">LOG IN</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
                 <form action="dashboard.html" method="post">
-                    <div class="branch">
-                        <h1>PADY USER</h1>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
                     </div>
-                    <div class="email">
-                        <label for="email"><h4>Email*</h4></label>
-                        <input type="email" name="email" id="email" placeholder="mail@simple.com" required />
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                            <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                <i class="bi bi-eye"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="password">
-                        <label for="pwd"><h4>Password*</h4></label>
-                        <input type="password" name="password" id="pwd" placeholder="Min. 8 characters" required />
-                        <p><a href="#">Forgot password?</a></p>
-                    </div>
-                    <div>
+                    <div class="mb-3">
                         <label for="keep-logged-in" id="checkbox">
                             <input type="checkbox" name="keep_logged_in" id="keep-logged-in" /> Keep me logged in
                         </label>
                     </div>
-                    <button type="submit" id="loginButton">Login</button>
-                    <div class="register-button">
+                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <div class="register-button mt-3">
                         <p>Don't have an account?</p>
                         <a href="sign.html" class="register-link">Register</a>
                     </div>
                 </form>
             </div>
-            <div class="login-image">
-                <img src="Images/PADY 3.png" alt="Login Image" />
-            </div>
         </div>
     </div>
 
-    <!-- Additional script for linking the login button -->
+
+    <!-- Bootstrap JS (optional, if not already included) -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons (optional, if not already included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0"></script>
+    <!-- Add any additional scripts here -->
     <script>
-        document.getElementById("loginButton").addEventListener("click", function () {
-            window.location.href = "dashboard.html"; // Redirect to dashboard.html
-        });
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+            document.getElementById("loginButton").addEventListener("click", function () {
+                window.location.href = "dashboard.html"; // Redirect to dashboard.html
+            });
     </script>
 
 </body>

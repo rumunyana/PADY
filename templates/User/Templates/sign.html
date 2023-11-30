@@ -1,54 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign Up Page</title>
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="CSS/sign_up.css" />
-    <!-- Poppins fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Montserrat:wght@200&family=Poppins:wght@200&display=swap" rel="stylesheet" />
-</head>
-<body>
-    <div class="main-container">
-        <div class="container">
-            <div class="signup-form">
-                <form action="../Template/dashboard.html" method="post">
-                    <div class="branch">
-                        <h1>PADY </h1>
-                    </div>
 
-                    <div class="form-content">
-                        <div class="form-fields">
-                            <div class="email">
-                                <h4>Email*</h4>
-                                <input type="email" name="email" placeholder="mail@simple.com" id="email" required />
-                            </div>
-                            <div class="password">
-                                <h4>Password*</h4>
-                                <input type="password" placeholder="Min. 8 characters" name="password" id="pwd" required />
-                            </div>
-                            <div class="confirm-password">
-                                <h4>Confirm Password*</h4>
-                                <input type="password" placeholder="Confirm password" name="confirm_password" id="confirmPwd" required />
-                            </div>
-                            <div>
-                                <label for="terms" id="checkbox">
-                                    <input type="checkbox" name="terms_agreement" required /> 
-                                    <span>I agree to the <a href="terms_and_conditions.html" target="_blank">terms and conditions</a></span>
-                                </label>
-                            </div>
-                            <button type="submit">Sign Up</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Include Bootstrap CSS link here if not already included -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0/font/bootstrap-icons.css">
+    <!-- Add any additional stylesheets or scripts here -->
+    <style>
+        /* Additional Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #aebccb;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0); /* Transparent white background */
+        }
+
+        .navbar-brand img {
+            max-height: 40px; /* Adjust the max height as needed */
+            margin-right: 10px; /* Optional: Add margin for spacing */
+        }
+
+        .signup-container {
+            max-width: 800px;
+            margin: auto;
+            padding: 70px 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin-top: 80px;
+        }
+
+        .form-check-label {
+            user-select: none;
+        }
+        button:hover {
+            background-color: #2d1276;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+        <div class="container-fluid">
+            <!-- Logo Image -->
+            <a class="navbar-brand" href="#">
+                <img src="Images/PADY 2.png" alt="PADY Logo">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Sign Up Form -->
+    <div class="container signup-container">
+        <h2 class="mb-4 text-center">REGISTER</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+               <form action="dashboard.html" method="post">
+                    <div class="mb-3">
+                         <label for="firstName" class="form-label">First Name</label>
+                         <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                    </div>
+                    <div class="mb-3">
+                         <label for="lastName" class="form-label">Last Name</label>
+                         <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                    </div>
+                    <div class="mb-3">
+                         <label for="email" class="form-label">Email</label>
+                         <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                         <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                          <input type="password" class="form-control" id="password" placeholder="Enter your password">
                         </div>
                     </div>
+                    <div class="mb-3">
+                         <label for="confirmPassword" class="form-label">Confirm Password</label>
+                         <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                    </div>
+                         <button type="submit" class="btn btn-primary">Create account</button>
                 </form>
             </div>
-            <div class="signup-image">
-                <img src="Images/PADY 1.png" alt="Signup Image" />
-            </div>
-        </div>
+        </div>    
     </div>
+
+    <!-- Bootstrap JS (optional, if not already included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!-- Bootstrap Icons (optional, if not already included) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.15.0"></script>
+    <!-- Add any additional scripts here -->
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+            } else {
+                passwordInput.type = 'password';
+            }
+            document.getElementById("loginButton").addEventListener("click", function () {
+                window.location.href = "dashboard.html"; // Redirect to dashboard.html
+        });
+    </script>
+
+
 </body>
+
 </html>
