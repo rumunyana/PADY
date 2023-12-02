@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <!-- Poppins fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300&family=Montserrat:wght@200&family=Poppins:wght@200&display=swap"
+      rel="stylesheet" />
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="grid-container">
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined">menu</span>
+        </div>
+        <div class="header-left">
+          <h4>Main Dashboard</h4>
+        </div>
+        <div class="header-right">
+          <div class="search-container">
+            <input type="search" name="search" id="search-input" placeholder="Search" />
+            <span class="material-icons-outlined search-icon">search</span>
+          </div>
+          <span class="material-icons-outlined">nightlight_round</span>
+          <span class="material-icons-outlined">account_circle</span>
+        </div>
+      </header>
+
+      <!-- sidebar -->
+      <aside id="sidebar">
+        <div class="sidebar-title">
+            <div class="sidebar-brand"><span class="material-icons-outlined">medication</span><strong><a
+                href="dashboard.html">PADY</a></strong></div>
+            <span class="material-icons-outlined" onclick="closeSidebar()">close_fullscreen</span>
+        </div>
+         <ul class="sidebar-list">
+            <li class="sidebar-list-item"><a href="dashboard.html">Dashboard</a></li>
+            <li class="sidebar-list-item"><a href="add_patient.html">Patient Records</a></li>
+            <li class="sidebar-list-item"><a href="hospital_management.html">Hospital Management</a></li>
+            <li class="sidebar-list-item"><a href="patient_testing_log.html">Patient Testing</a></li>
+            <li class="sidebar-list-item"><a href="patient_management.html">User Management</a></li>
+            <li class="sidebar-list-item"><a href="doctor_management.html">Doctor Management</a></li>
+            <li class="sidebar-list-item"><a href="Scheduling.html">Scheduling</a></li>
+            <li class="sidebar-list-item"><a href="Patient_Reports.html">Appointments</a></li>
+            <li class="sidebar-list-item"><a href="generate_bill.html">General Bills</a></li>
+            <li class="sidebar-list-item"><a href="profile.html">Profile</a></li>
+         </ul>
+        <div class="purple-logout-button">
+            <button type="button" class="btn btn-purple"><a href="login.html">Logout</a></a></button>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main-container">
+        <div class="main-title">
+          <p class="branch">Kigali branch</p>
+        </div>
+
+        <div class="main-cards">
+
+          <div class="card">
+            <div class="card-inner">
+              <img src="../images/users-group.png" alt="An image icon of the users group">
+              <div class="users-div">
+                <p class="card-title">Users</p>
+                <p class="card-number">249</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <img src="../images/dollar_sign.png" alt="">
+              <div class="total_payments">
+                <p class="card-title">Total payment</p>
+                <p class="card-number text-primary font-weight-bold">20000</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <img src="../images/active_user.png" alt="">
+              <div class="active_users">
+                <p class="card-title">Active Users</p>
+                <p class="card-number text-primary font-weight-bold">22</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="charts">
+
+          <div class="charts-card">
+            <p class="chart-title">Total number of patients per month</p>
+            <div id="bar-chart"></div>
+          </div>
+
+          <div class="charts-card">
+            <p class="chart-title">Patient Analysis</p>
+            <div id="area-chart"></div>
+          </div>
+        </div>
+        <div class="recent-payments">
+          <div class="section-header">
+            <p class="section-title">Recent Payments</p>
+            <a href="#" class="see-all">See All</a>
+          </div>
+          <div class="payment-card">
+            <div class="payment-profile">
+              <img src="../images/profile_picture.png" alt="Profile Picture">
+              <div class="profile-name">Mithlesh K.Singh</div>
+            </div>
+            <div class="payment-details">
+              <div class="payment-time">20 seconds ago</div>
+              <div class="payment-amount">25,000 RW</div>
+            </div>
+          </div>
+      </main>
+      <!-- END MAIN -->
+
+      <!-- Scripts -->
+      <!-- ApexCharts -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+      <!-- Custom JS -->
+      <script src="../Template/js/script.js"></script>
+  </body>
+
+</html>

@@ -7,10 +7,10 @@
 
 /* General Styles */
 body {
-  background-color: #aebccb;
+  background-color: #FFFFFF;
   color: #2b3674;
   font-family: "DM Sans", sans-serif;
-  background: linear-gradient(to bottom, #dfe1ed, #717796); 
+  background: linear-gradient(to bottom, #c6a2b8, #d7c8d1); 
 }
 
 /* Styling for icons */
@@ -84,11 +84,12 @@ body {
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #e3cada;
   box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  background: linear-gradient(to bottom, #dfc6d6, #d7c8d1);
 }
 
 /* Styling for the list items in the sidebar */
@@ -136,8 +137,9 @@ margin-top: 180px;
 .purple-logout-button {
   display: flex;
   justify-content: center;
-  margin-top: 90px;
-  margin-bottom: 20px; /* Add margin at the bottom to create distance from other elements */
+  margin-top: 300px;
+  /* margin-bottom: 20px; */
+  /* Add margin at the bottom to create distance from other elements */
 }
 
 /* Styling for the Purple Login Button */
@@ -158,6 +160,7 @@ margin-top: 180px;
 .purple-logout-button .btn:hover {
   background-color: #9d4aff;
 }
+
 .purple-logout-button a {
   text-decoration: none;
 }
