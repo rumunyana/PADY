@@ -38,8 +38,34 @@
         .form-check-label {
             user-select: none;
         }
+
         button:hover {
             background-color: #2d1276;
+        }
+
+        /* Updated styles for not registered buttons */
+        .signup-btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-btn {
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #584dc3;
+            border: 1px solid #584dc3;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin: 0 10px; /* Adjust margin as needed */
+        }
+
+        .signup-btn:hover {
+            background-color: #2d1276;
+            color: #fff;
         }
     </style>
 </head>
@@ -80,16 +106,20 @@
                             <input type="checkbox" name="keep_logged_in" id="keep-logged-in" /> Keep me logged in
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Log In</button>
-                    <div class="register-button mt-3">
-                        <p>Don't have an account?</p>
-                        <a href="sign.html" class="register-link">Register</a>
+                    <button type="submit" class="btn btn-primary" id="loginButton">Log In</button>
+                    <div class="container-fluid">
+                        <hr />
+                        <h3 class="mb-3" style="text-align:center;">Not Registered?</h3>
+                        <div class="signup-btn-container">
+                            <!-- Updated buttons -->
+                            <a class="signup-btn" href="sign.html">Signup as Patient</a>
+                            <a class="signup-btn" href="/signup_doctor">Signup as Hospital</a>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-
 
     <!-- Bootstrap JS (optional, if not already included) -->
     <script
@@ -108,9 +138,11 @@
             } else {
                 passwordInput.type = 'password';
             }
-            document.getElementById("loginButton").addEventListener("click", function () {
-                window.location.href = "profile.html"; // Redirect to profile.html
-            });
+        });
+
+        document.getElementById("loginButton").addEventListener("click", function () {
+            window.location.href = "profile.html"; // Redirect to profile.html
+        });
     </script>
 
 </body>
